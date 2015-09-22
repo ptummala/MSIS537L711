@@ -1,0 +1,43 @@
+INSERT INTO CUSTOMER
+values ('C0954327','Sheri','Gordan','Littleton','CO',80129-5543,'$230');
+INSERT INTO CUSTOMER
+values ('C1010398','Jim','Glussman','Denver','CO',80111-0033,'$200');
+INSERT INTO CUSTOMER
+values ('C2388597','Beth','Taylor','Seattle','WA',98103-1121,'$500');
+INSERT INTO CUSTOMER
+values ('C3340959','Betty','Wise','Seattle','WA',98178-3311,'$200');
+INSERT INTO CUSTOMER
+values ('C3499503','Bob','Mann','Monroe','WA',98013-1095,'$0.00');
+INSERT INTO CUSTOMER
+values ('C8543321','Ron','Thompson','Renton','WA',98666-1289,'$85.00');
+Insert into EMPLOYEE 
+values ('E1329594','Landi','Santos','(303)789-1234','LSantos@bigco.com');
+Insert into EMPLOYEE 
+values ('E8544399','Joe','Jenkins','(303)221-9875','JJenkins@bigco.com');
+Insert into EMPLOYEE 
+values ('E8843211','Amy','Tang','(303)556-4321','ATang@bigco.com');
+Insert into EMPLOYEE  
+values ('E9345771','Colin','White','(303)221-4453','CWhite@bigco.com');
+Insert into EMPLOYEE 
+values ('E9884325','Thomas','Johnson','(303)556-9987','TJohnson@bigco.com');
+Insert into EMPLOYEE 
+values ('E9954302','Mary','Hill','(303)556-9871','MHill@bigco.com');
+
+Insert into ORDERTABLE
+values ('O1116324',to_date('23-JAN-13','DD-MON-YY'),'C0954327','E8544399');
+Insert into ORDERTABLE
+values ('O2334661',to_date('14-JAN-13','DD-MON-YY'),'C0954327','E13295594');
+Insert into ORDERTABLE
+values ('O3331222',to_date('13-JAN-13','DD-MON-YY'),'C1010398',null);
+Insert into ORDERTABLE
+values ('O2233457',to_date('12-JAN-13','DD-MON-YY'),'C2388597','E9884325');
+Insert into ORDERTABLE
+values ('O4714645',to_date('11-JAN-13','DD-MON-YY'),'C2388597','E13295594');
+Insert into ORDERTABLE
+values ('O5511365',to_date('22-JAN-13','DD-MON-YY'),'C3340959','E9884325');
+Insert into ORDERTABLE
+values ('O7989497',to_date('16-JAN-13','DD-MON-YY'),'C3499503','E9345771');
+Insert into ORDERTABLE
+values ('O1656777',to_date('11-FEB-13','DD-MON-YY'),'C8543321',null);
+Insert into ORDERTABLE
+values ('O7959898',to_date('19-FEB-13','DD-MON-YY'),'C8543321','E8544399');
