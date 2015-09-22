@@ -1,0 +1,40 @@
+
+CREATE TABLE customer
+  (
+    CustNo        VARCHAR2 (50) NOT NULL ,
+    CustFirstName VARCHAR2 (50) ,
+    CusLastName   VARCHAR2 (50) ,
+    CustCity      VARCHAR2 (50) ,
+    CustState     VARCHAR2 (50) ,
+    CustZip NVARCHAR2 (50) ,
+    CustBal VARCHAR2 (50)
+  ) ;
+ALTER TABLE customer ADD CONSTRAINT customer_PK PRIMARY KEY ( CustNo ) ;
+
+
+CREATE TABLE employee
+  (
+    EmpNo        VARCHAR2 (50) NOT NULL ,
+    EmpFirstName VARCHAR2 (50) ,
+    EmpLastName  VARCHAR2 (50) ,
+    EmpPhone NVARCHAR2 (50) ,
+    EmpEmail VARCHAR2 (50)
+  ) ;
+ALTER TABLE employee ADD CONSTRAINT employee_PK PRIMARY KEY ( EmpNo ) ;
+
+
+CREATE TABLE ordertable
+  (
+    OrdNo           VARCHAR2 (50) NOT NULL ,
+    OrdDate         DATE ,
+    CustNo          VARCHAR2 (50) NOT NULL ,
+    EmpNo           VARCHAR2 (50) ,
+    customer_CustNo VARCHAR2 (50 CHAR) NOT NULL ,
+    employee_EmpNo  VARCHAR2 (50 CHAR) NOT NULL
+  ) ;
+ALTER TABLE ordertable ADD CONSTRAINT ordertbl_PK PRIMARY KEY ( OrdNo ) ;
+
+
+ALTER TABLE ordertable ADD CONSTRAINT ordertbl_customer_FK FOREIGN KEY ( customer_CustNo ) REFERENCES customer ( CustNo ) ;
+
+ALTER TABLE ordertable ADD CONSTRAINT ordertbl_employee_FK FOREIGN KEY ( employee_EmpNo ) REFERENCES employee ( EmpNo ) ;
